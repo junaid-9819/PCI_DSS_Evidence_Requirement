@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCI DSS 4.0.1 Evidence Requirements - Physical Security Domain</title>
+<style>
+:root {
+--primary-color: #2c3e50;
+--secondary-color: #3498db;
+--accent-color: #e74c3c;
+--light-bg: #f5f7fa;
+--text-color: #333;
+--light-text: #666;
+--border-color: #ddd;
+--table-header: #f1f8ff;
+--table-even: #f9f9f9;
+--nav-highlight: #2980b9;
+}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: var(--text-color);
+background-color: var(--light-bg);
+padding: 0;
+margin: 0;
+}
+.container {max-width: 1200px; margin: 0 auto; padding: 0 20px;}
+header {
+background-color: var(--primary-color);
+color: white;
+padding: 2rem 0;
+margin-bottom: 2rem;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header h1 {font-size: 2.5rem; margin-bottom: 0.5rem;}
+header p {font-size: 1.2rem; opacity: 0.8;}
+nav {
+background-color: white;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+margin-bottom: 2rem;
+overflow: hidden;
+}
+nav ul {
+display: flex;
+list-style: none;
+overflow-x: auto;
+padding: 0;
+}
+nav ul li {
+flex-shrink: 0;
+}
+nav ul li a {
+display: block;
+padding: 1rem 1.5rem;
+text-decoration: none;
+color: var(--text-color);
+font-weight: 500;
+transition: background-color 0.3s ease;
+white-space: nowrap;
+}
+nav ul li a:hover {
+background-color: var(--light-bg);
+}
+nav ul li a.active {
+background-color: var(--nav-highlight);
+color: white;
+}
+.back-to-index {
+display: inline-block;
+margin-bottom: 1rem;
+color: var(--secondary-color);
+text-decoration: none;
+font-weight: 500;
+}
+.back-to-index:before {
+content: "← ";
+}
+section {
+background-color: white;
+border-radius: 8px;
+padding: 2rem;
+margin-bottom: 2rem;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+h2 {
+color: var(--primary-color);
+margin-bottom: 1rem;
+padding-bottom: 0.5rem;
+border-bottom: 2px solid var(--secondary-color);
+}
+.domain-intro {
+background-color: var(--light-bg);
+padding: 1.5rem;
+border-left: 4px solid var(--secondary-color);
+margin-bottom: 2rem;
+border-radius: 4px;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 1.5rem 0;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+th, td {
+padding: 1rem;
+text-align: left;
+border: 1px solid var(--border-color);
+vertical-align: top;
+}
+th {
+background-color: var(--table-header);
+font-weight: 600;
+color: var(--primary-color);
+}
+tr:nth-child(even) {background-color: var(--table-even);}
+strong {font-weight: bold;}
+footer {
+background-color: var(--primary-color);
+color: white;
+text-align: center;
+padding: 1.5rem 0;
+margin-top: 2rem;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<h1>Physical Security Domain</h1>
+<p>PCI DSS 4.0.1 Evidence Requirements</p>
+</div>
+</header>
+
+<div class="container">
+<a href="index.html" class="back-to-index">Back to Index</a>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="scoping.html">Scoping</a></li>
+<li><a href="governance.html">Governance</a></li>
+<li><a href="network-security.html">Network Security</a></li>
+<li><a href="system-security.html">System Security</a></li>
+<li><a href="data-security.html">Data Security</a></li>
+<li><a href="access-control.html">Access Control</a></li>
+<li><a href="physical-security.html" class="active">Physical Security</a></li>
+<li><a href="vulnerability-management.html">Vulnerability Management</a></li>
+<li><a href="logging-monitoring.html">Logging & Monitoring</a></li>
+<li><a href="security-scanning.html">Security Scanning</a></li>
+<li><a href="incident-response.html">Incident Response</a></li>
+<li><a href="third-party.html">Third-Party Providers</a></li>
+<li><a href="additional-requirements.html">Additional Requirements</a></li>
+</ul>
+</nav>
+
+<section>
+<div class="domain-intro">
+<p>The <strong>Physical Security</strong> domain ensures that physical access to cardholder data (CHD) and the Cardholder Data Environment (CDE) is restricted and monitored to prevent unauthorized access. The evidence below is consolidated for functional stakeholders (e.g., facilities, security, IT teams), using practical, real-world artifacts aligned with PCI DSS v4.0.1 requirements.</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th width="25%"><strong>Evidence Requirement</strong></th>
+<th width="15%"><strong>PCI DSS Requirement(s)</strong></th>
+<th width="60%"><strong>Description and Practical Examples</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Physical Access Control Policy</strong></td>
+<td>9.1.1, 9.1.2</td>
+<td>A documented policy outlining processes for restricting physical access to CDE areas (e.g., data centers, server rooms) and sensitive areas, including authorization and monitoring procedures. <strong>Example</strong>: A PDF policy document titled "Physical Security Policy" detailing access controls for the CDE data center, including badge access requirements and visitor management procedures.</td>
+</tr>
+<tr>
+<td><strong>Physical Access Control Configurations</strong></td>
+<td>9.1.3, 9.1.4, 9.2.1, 9.2.2</td>
+<td>Configurations or logs showing implemented controls (e.g., badge readers, biometric locks) to limit and monitor access to CDE areas, ensuring only authorized personnel are granted entry. <strong>Example</strong>: Screenshots from an access control system (e.g., Lenel, HID) showing badge reader settings for a CDE server room, plus access logs listing authorized personnel entries.</td>
+</tr>
+<tr>
+<td><strong>Visitor Management Records</strong></td>
+<td>9.3.1, 9.3.2, 9.3.3</td>
+<td>Records of visitor access to CDE areas, including identification, authorization, and escort procedures, with logs maintained for at least 3 months. <strong>Example</strong>: A visitor logbook (physical or digital, e.g., in Envoy) listing visitor names, dates, purposes (e.g., maintenance), and escort details, plus badge issuance/return records for a CDE data center.</td>
+</tr>
+<tr>
+<td><strong>Media Handling Procedures</strong></td>
+<td>9.4.1, 9.4.2, 9.4.3, 9.4.4, 9.4.5</td>
+<td>Documented procedures for securely storing, transporting, and destroying media containing CHD (e.g., hard drives, paper records), including classification and inventory processes. <strong>Example</strong>: An SOP in Word outlining secure storage of backup tapes in a locked vault, transport via bonded courier, and cross-cut shredding of paper receipts, plus an annual media inventory log in Excel.</td>
+</tr>
+<tr>
+<td><strong>Media Destruction Records</strong></td>
+<td>9.4.6, 9.4.7</td>
+<td>Records of secure destruction of media containing CHD (e.g., electronic media wiped, hard-copy media shredded), including methods and dates. <strong>Example</strong>: A destruction log in PDF detailing wiped hard drives (e.g., using DBAN) and shredded paper records (e.g., via a third-party service), with dates and responsible personnel signatures.</td>
+</tr>
+<tr>
+<td><strong>POI Device Inventory and Inspection Records</strong></td>
+<td>9.5.1, 9.5.2, 9.5.3</td>
+<td>An inventory of point-of-interaction (POI) devices (e.g., POS terminals) with make, model, location, and unique identifier, plus records of regular tampering inspections. <strong>Example</strong>: An Excel spreadsheet listing POS terminals (e.g., "Verifone VX520, Serial #12345, Store #1"), plus monthly inspection checklists in PDF confirming no tampering or skimming devices.</td>
+</tr>
+<tr>
+<td><strong>Physical Security Monitoring Evidence</strong></td>
+<td>9.1.5, 9.2.3</td>
+<td>Evidence of monitoring mechanisms (e.g., CCTV, motion sensors) in CDE areas to detect unauthorized access, with footage/logs retained per policy. <strong>Example</strong>: CCTV configuration screenshots showing coverage of a CDE server room entrance, plus 90-day retained video logs (e.g., from Milestone XProtect) documenting access events.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+
+<footer>
+<div class="container">
+<p>PCI DSS 4.0.1 Evidence Requirements Guide</p>
+</div>
+</footer>
+</body>
+</html>

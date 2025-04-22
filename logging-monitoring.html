@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCI DSS 4.0.1 Evidence Requirements - Logging and Monitoring Domain</title>
+<style>
+:root {
+--primary-color: #2c3e50;
+--secondary-color: #3498db;
+--accent-color: #e74c3c;
+--light-bg: #f5f7fa;
+--text-color: #333;
+--light-text: #666;
+--border-color: #ddd;
+--table-header: #f1f8ff;
+--table-even: #f9f9f9;
+--nav-highlight: #2980b9;
+}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: var(--text-color);
+background-color: var(--light-bg);
+padding: 0;
+margin: 0;
+}
+.container {max-width: 1200px; margin: 0 auto; padding: 0 20px;}
+header {
+background-color: var(--primary-color);
+color: white;
+padding: 2rem 0;
+margin-bottom: 2rem;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header h1 {font-size: 2.5rem; margin-bottom: 0.5rem;}
+header p {font-size: 1.2rem; opacity: 0.8;}
+nav {
+background-color: white;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+margin-bottom: 2rem;
+overflow: hidden;
+}
+nav ul {
+display: flex;
+list-style: none;
+overflow-x: auto;
+padding: 0;
+}
+nav ul li {
+flex-shrink: 0;
+}
+nav ul li a {
+display: block;
+padding: 1rem 1.5rem;
+text-decoration: none;
+color: var(--text-color);
+font-weight: 500;
+transition: background-color 0.3s ease;
+white-space: nowrap;
+}
+nav ul li a:hover {
+background-color: var(--light-bg);
+}
+nav ul li a.active {
+background-color: var(--nav-highlight);
+color: white;
+}
+.back-to-index {
+display: inline-block;
+margin-bottom: 1rem;
+color: var(--secondary-color);
+text-decoration: none;
+font-weight: 500;
+}
+.back-to-index:before {
+content: "← ";
+}
+section {
+background-color: white;
+border-radius: 8px;
+padding: 2rem;
+margin-bottom: 2rem;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+h2 {
+color: var(--primary-color);
+margin-bottom: 1rem;
+padding-bottom: 0.5rem;
+border-bottom: 2px solid var(--secondary-color);
+}
+.domain-intro {
+background-color: var(--light-bg);
+padding: 1.5rem;
+border-left: 4px solid var(--secondary-color);
+margin-bottom: 2rem;
+border-radius: 4px;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 1.5rem 0;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+th, td {
+padding: 1rem;
+text-align: left;
+border: 1px solid var(--border-color);
+vertical-align: top;
+}
+th {
+background-color: var(--table-header);
+font-weight: 600;
+color: var(--primary-color);
+}
+tr:nth-child(even) {background-color: var(--table-even);}
+strong {font-weight: bold;}
+footer {
+background-color: var(--primary-color);
+color: white;
+text-align: center;
+padding: 1.5rem 0;
+margin-top: 2rem;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<h1>Logging and Monitoring Domain</h1>
+<p>PCI DSS 4.0.1 Evidence Requirements</p>
+</div>
+</header>
+
+<div class="container">
+<a href="index.html" class="back-to-index">Back to Index</a>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="scoping.html">Scoping</a></li>
+<li><a href="governance.html">Governance</a></li>
+<li><a href="network-security.html">Network Security</a></li>
+<li><a href="system-security.html">System Security</a></li>
+<li><a href="data-security.html">Data Security</a></li>
+<li><a href="access-control.html">Access Control</a></li>
+<li><a href="physical-security.html">Physical Security</a></li>
+<li><a href="vulnerability-management.html">Vulnerability Management</a></li>
+<li><a href="logging-monitoring.html" class="active">Logging & Monitoring</a></li>
+<li><a href="security-scanning.html">Security Scanning</a></li>
+<li><a href="incident-response.html">Incident Response</a></li>
+<li><a href="third-party.html">Third-Party Providers</a></li>
+<li><a href="additional-requirements.html">Additional Requirements</a></li>
+</ul>
+</nav>
+
+<section>
+<div class="domain-intro">
+<p>The <strong>Logging and Monitoring</strong> domain ensures that all access to system components and cardholder data in the Cardholder Data Environment (CDE) is logged and monitored to detect and respond to security events. The evidence below is consolidated for functional stakeholders (e.g., IT, security, network teams), using practical, real-world artifacts aligned with PCI DSS v4.0.1 requirements.</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th width="25%"><strong>Evidence Requirement</strong></th>
+<th width="15%"><strong>PCI DSS Requirement(s)</strong></th>
+<th width="60%"><strong>Description and Practical Examples</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Logging and Monitoring Policy</strong></td>
+<td>10.1.1, 10.1.2</td>
+<td>A documented policy defining processes for logging and monitoring access to CDE system components and cardholder data, including audit log generation and retention. <strong>Example</strong>: A PDF policy document titled "Logging and Monitoring Policy" outlining log generation for CDE systems (e.g., servers, databases), retention for at least 12 months, and daily review procedures.</td>
+</tr>
+<tr>
+<td><strong>Audit Log Configurations</strong></td>
+<td>10.2.1, 10.2.2, 10.2.3, 10.2.4, 10.2.5, 10.2.6, 10.2.7</td>
+<td>Configurations showing audit logs enabled on CDE systems, capturing security events (e.g., successful/failed logins, access to cardholder data, system changes) and protected from unauthorized modification. <strong>Example</strong>: Screenshots from a SIEM (e.g., Splunk) or server (e.g., Windows Event Viewer) showing enabled logging for CDE server access, with access controls restricting log modifications.</td>
+</tr>
+<tr>
+<td><strong>Daily Log Review Records</strong></td>
+<td>10.4.1, 10.4.2</td>
+<td>Records of daily reviews of audit logs for critical security controls (e.g., firewalls, authentication servers), identifying and investigating anomalies. <strong>Example</strong>: A SIEM report in PDF from Splunk showing daily log reviews for CDE firewall events, with analyst notes on investigated anomalies (e.g., failed login attempts).</td>
+</tr>
+<tr>
+<td><strong>Periodic Log Review Records</strong></td>
+<td>10.4.3</td>
+<td>Records of periodic (e.g., weekly or monthly) log reviews for non-critical CDE systems not subject to daily reviews. <strong>Example</strong>: A quarterly log review summary in Excel for CDE application servers, documenting reviewed events (e.g., configuration changes) and any follow-up actions.</td>
+</tr>
+<tr>
+<td><strong>Time Synchronization Configurations</strong></td>
+<td>10.6.1, 10.6.2</td>
+<td>Configurations showing Network Time Protocol (NTP) or similar time-synchronization mechanisms enabled on CDE systems to ensure accurate log timestamps. <strong>Example</strong>: Screenshots of NTP settings on CDE servers (e.g., pointing to time.windows.com) and a router configuration file confirming synchronized time across devices.</td>
+</tr>
+<tr>
+<td><strong>Log Retention and Protection Evidence</strong></td>
+<td>10.5.1, 10.5.2, 10.5.3, 10.5.4</td>
+<td>Evidence of audit log retention for at least 12 months (with 3 months immediately available) and protections against tampering (e.g., write-once storage, access controls). <strong>Example</strong>: A backup system report showing 12 months of archived logs stored on a WORM drive, plus SIEM access control settings restricting log file modifications.</td>
+</tr>
+<tr>
+<td><strong>Security Event Response Procedures</strong></td>
+<td>10.7.1, 10.7.2, 10.7.3</td>
+<td>Documented procedures for responding to security events identified in logs, including escalation and remediation processes, with evidence of responses to critical events. <strong>Example</strong>: An SOP in Word detailing escalation steps for SIEM alerts (e.g., unauthorized access), plus a ServiceNow incident ticket documenting a responded-to CDE server breach with remediation details.</td>
+</tr>
+<tr>
+<td><strong>Log Collection and Correlation Processes (DESV)</strong></td>
+<td>A3.3.2</td>
+<td>For Designated Entities, documented processes for collecting and correlating logs from critical CDE systems and security functions, with evidence of implementation. <strong>Example</strong>: A SIEM configuration guide in PDF describing log collection from CDE servers and firewalls, plus a Splunk dashboard screenshot showing correlated events (e.g., login failures across systems).</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+
+<footer>
+<div class="container">
+<p>PCI DSS 4.0.1 Evidence Requirements Guide</p>
+</div>
+</footer>
+</body>
+</html>

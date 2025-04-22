@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCI DSS 4.0.1 Evidence Requirements - Third-Party Service Provider Management Domain</title>
+<style>
+:root {
+--primary-color: #2c3e50;
+--secondary-color: #3498db;
+--accent-color: #e74c3c;
+--light-bg: #f5f7fa;
+--text-color: #333;
+--light-text: #666;
+--border-color: #ddd;
+--table-header: #f1f8ff;
+--table-even: #f9f9f9;
+--nav-highlight: #2980b9;
+}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: var(--text-color);
+background-color: var(--light-bg);
+padding: 0;
+margin: 0;
+}
+.container {max-width: 1200px; margin: 0 auto; padding: 0 20px;}
+header {
+background-color: var(--primary-color);
+color: white;
+padding: 2rem 0;
+margin-bottom: 2rem;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header h1 {font-size: 2.5rem; margin-bottom: 0.5rem;}
+header p {font-size: 1.2rem; opacity: 0.8;}
+nav {
+background-color: white;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+margin-bottom: 2rem;
+overflow: hidden;
+}
+nav ul {
+display: flex;
+list-style: none;
+overflow-x: auto;
+padding: 0;
+}
+nav ul li {
+flex-shrink: 0;
+}
+nav ul li a {
+display: block;
+padding: 1rem 1.5rem;
+text-decoration: none;
+color: var(--text-color);
+font-weight: 500;
+transition: background-color 0.3s ease;
+white-space: nowrap;
+}
+nav ul li a:hover {
+background-color: var(--light-bg);
+}
+nav ul li a.active {
+background-color: var(--nav-highlight);
+color: white;
+}
+.back-to-index {
+display: inline-block;
+margin-bottom: 1rem;
+color: var(--secondary-color);
+text-decoration: none;
+font-weight: 500;
+}
+.back-to-index:before {
+content: "← ";
+}
+section {
+background-color: white;
+border-radius: 8px;
+padding: 2rem;
+margin-bottom: 2rem;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+h2 {
+color: var(--primary-color);
+margin-bottom: 1rem;
+padding-bottom: 0.5rem;
+border-bottom: 2px solid var(--secondary-color);
+}
+.domain-intro {
+background-color: var(--light-bg);
+padding: 1.5rem;
+border-left: 4px solid var(--secondary-color);
+margin-bottom: 2rem;
+border-radius: 4px;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 1.5rem 0;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+th, td {
+padding: 1rem;
+text-align: left;
+border: 1px solid var(--border-color);
+vertical-align: top;
+}
+th {
+background-color: var(--table-header);
+font-weight: 600;
+color: var(--primary-color);
+}
+tr:nth-child(even) {background-color: var(--table-even);}
+strong {font-weight: bold;}
+footer {
+background-color: var(--primary-color);
+color: white;
+text-align: center;
+padding: 1.5rem 0;
+margin-top: 2rem;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<h1>Third-Party Service Provider Management Domain</h1>
+<p>PCI DSS 4.0.1 Evidence Requirements</p>
+</div>
+</header>
+
+<div class="container">
+<a href="index.html" class="back-to-index">Back to Index</a>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="scoping.html">Scoping</a></li>
+<li><a href="governance.html">Governance</a></li>
+<li><a href="network-security.html">Network Security</a></li>
+<li><a href="system-security.html">System Security</a></li>
+<li><a href="data-security.html">Data Security</a></li>
+<li><a href="access-control.html">Access Control</a></li>
+<li><a href="physical-security.html">Physical Security</a></li>
+<li><a href="vulnerability-management.html">Vulnerability Management</a></li>
+<li><a href="logging-monitoring.html">Logging & Monitoring</a></li>
+<li><a href="security-scanning.html">Security Scanning</a></li>
+<li><a href="incident-response.html">Incident Response</a></li>
+<li><a href="third-party.html" class="active">Third-Party Providers</a></li>
+<li><a href="additional-requirements.html">Additional Requirements</a></li>
+</ul>
+</nav>
+
+<section>
+<div class="domain-intro">
+<p>The <strong>Third-Party Service Provider Management</strong> domain ensures that third-party service providers (TPSPs) handling cardholder data (CHD) or impacting the security of the Cardholder Data Environment (CDE) are appropriately managed and compliant with PCI DSS requirements. The evidence below is consolidated for functional stakeholders (e.g., compliance, procurement, IT teams), using practical, real-world artifacts aligned with PCI DSS v4.0.1 requirements.</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th width="25%"><strong>Evidence Requirement</strong></th>
+<th width="15%"><strong>PCI DSS Requirement(s)</strong></th>
+<th width="60%"><strong>Description and Practical Examples</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TPSP Inventory</strong></td>
+<td>12.8.1</td>
+<td>A maintained list of all TPSPs involved in storing, processing, or transmitting CHD, or impacting CDE security, including descriptions of their services. <strong>Example</strong>: An Excel spreadsheet listing TPSPs (e.g., "Payment Gateway X, processes transactions; Cloud Provider Y, hosts CDE servers"), with details on service scope and contact information.</td>
+</tr>
+<tr>
+<td><strong>TPSP Written Agreements</strong></td>
+<td>12.8.2</td>
+<td>Written agreements with TPSPs acknowledging their responsibility for securing CHD and providing information for PCI DSS compliance. <strong>Example</strong>: A PDF contract or service-level agreement (SLA) with a payment processor, including clauses on PCI DSS compliance, data security obligations, and audit rights.</td>
+</tr>
+<tr>
+<td><strong>TPSP Due Diligence Records</strong></td>
+<td>12.8.3</td>
+<td>Documentation of due diligence performed before engaging TPSPs, evaluating their PCI DSS compliance, security practices, and incident response capabilities. <strong>Example</strong>: A PDF due diligence report for a cloud provider, summarizing their PCI DSS AOC review, security certifications (e.g., ISO 27001), and breach notification processes.</td>
+</tr>
+<tr>
+<td><strong>TPSP Compliance Status Monitoring</strong></td>
+<td>12.8.4, 12.8.5</td>
+<td>Records of annual monitoring of TPSPs' PCI DSS compliance status, including Attestations of Compliance (AOCs) or other evidence of compliance. <strong>Example</strong>: A folder containing AOCs from TPSPs (e.g., payment gateway's AOC dated within 12 months) and an Excel tracker noting compliance status and review dates.</td>
+</tr>
+<tr>
+<td><strong>Shared Responsibility Matrix</strong></td>
+<td>12.9.1, 12.9.2</td>
+<td>Documentation detailing which PCI DSS requirements are managed by each TPSP, which are managed by the entity, and any shared responsibilities. <strong>Example</strong>: An Excel matrix listing PCI DSS requirements (e.g., Requirement 3 for data protection), with columns indicating "TPSP" (e.g., cloud provider encrypts data), "Entity" (e.g., manages key custodians), or "Shared" (e.g., joint monitoring).</td>
+</tr>
+<tr>
+<td><strong>TPSP Compliance Support Evidence</strong></td>
+<td>12.9.2</td>
+<td>Evidence that TPSPs provide information to support the entity's PCI DSS compliance, such as compliance reports or audit data. <strong>Example</strong>: A PDF report from a TPSP (e.g., cloud provider's SOC 2 report) shared with the entity, detailing security controls relevant to CDE hosting, plus email correspondence confirming data access for audits.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+
+<footer>
+<div class="container">
+<p>PCI DSS 4.0.1 Evidence Requirements Guide</p>
+</div>
+</footer>
+</body>
+</html>

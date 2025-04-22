@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCI DSS 4.0.1 Evidence Requirements - System Security Domain</title>
+<style>
+:root {
+--primary-color: #2c3e50;
+--secondary-color: #3498db;
+--accent-color: #e74c3c;
+--light-bg: #f5f7fa;
+--text-color: #333;
+--light-text: #666;
+--border-color: #ddd;
+--table-header: #f1f8ff;
+--table-even: #f9f9f9;
+--nav-highlight: #2980b9;
+}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: var(--text-color);
+background-color: var(--light-bg);
+padding: 0;
+margin: 0;
+}
+.container {max-width: 1200px; margin: 0 auto; padding: 0 20px;}
+header {
+background-color: var(--primary-color);
+color: white;
+padding: 2rem 0;
+margin-bottom: 2rem;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header h1 {font-size: 2.5rem; margin-bottom: 0.5rem;}
+header p {font-size: 1.2rem; opacity: 0.8;}
+nav {
+background-color: white;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+margin-bottom: 2rem;
+overflow: hidden;
+}
+nav ul {
+display: flex;
+list-style: none;
+overflow-x: auto;
+padding: 0;
+}
+nav ul li {
+flex-shrink: 0;
+}
+nav ul li a {
+display: block;
+padding: 1rem 1.5rem;
+text-decoration: none;
+color: var(--text-color);
+font-weight: 500;
+transition: background-color 0.3s ease;
+white-space: nowrap;
+}
+nav ul li a:hover {
+background-color: var(--light-bg);
+}
+nav ul li a.active {
+background-color: var(--nav-highlight);
+color: white;
+}
+.back-to-index {
+display: inline-block;
+margin-bottom: 1rem;
+color: var(--secondary-color);
+text-decoration: none;
+font-weight: 500;
+}
+.back-to-index:before {
+content: "← ";
+}
+section {
+background-color: white;
+border-radius: 8px;
+padding: 2rem;
+margin-bottom: 2rem;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+h2 {
+color: var(--primary-color);
+margin-bottom: 1rem;
+padding-bottom: 0.5rem;
+border-bottom: 2px solid var(--secondary-color);
+}
+.domain-intro {
+background-color: var(--light-bg);
+padding: 1.5rem;
+border-left: 4px solid var(--secondary-color);
+margin-bottom: 2rem;
+border-radius: 4px;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 1.5rem 0;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+th, td {
+padding: 1rem;
+text-align: left;
+border: 1px solid var(--border-color);
+vertical-align: top;
+}
+th {
+background-color: var(--table-header);
+font-weight: 600;
+color: var(--primary-color);
+}
+tr:nth-child(even) {background-color: var(--table-even);}
+strong {font-weight: bold;}
+footer {
+background-color: var(--primary-color);
+color: white;
+text-align: center;
+padding: 1.5rem 0;
+margin-top: 2rem;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<h1>System Security Domain</h1>
+<p>PCI DSS 4.0.1 Evidence Requirements</p>
+</div>
+</header>
+
+<div class="container">
+<a href="index.html" class="back-to-index">Back to Index</a>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="scoping.html">Scoping</a></li>
+<li><a href="governance.html">Governance</a></li>
+<li><a href="network-security.html">Network Security</a></li>
+<li><a href="system-security.html" class="active">System Security</a></li>
+<li><a href="data-security.html">Data Security</a></li>
+<li><a href="access-control.html">Access Control</a></li>
+<li><a href="physical-security.html">Physical Security</a></li>
+<li><a href="vulnerability-management.html">Vulnerability Management</a></li>
+<li><a href="logging-monitoring.html">Logging & Monitoring</a></li>
+<li><a href="security-scanning.html">Security Scanning</a></li>
+<li><a href="incident-response.html">Incident Response</a></li>
+<li><a href="third-party.html">Third-Party Providers</a></li>
+<li><a href="additional-requirements.html">Additional Requirements</a></li>
+</ul>
+</nav>
+
+<section>
+<div class="domain-intro">
+<p>The <strong>System Security</strong> domain ensures that in-scope system components are securely configured and maintained to protect the Cardholder Data Environment (CDE). The evidence below is consolidated for functional stakeholders (e.g., IT, system administration, security teams), using practical, real-world artifacts aligned with PCI DSS v4.0.1 requirements.</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th width="25%"><strong>Evidence Requirement</strong></th>
+<th width="15%"><strong>PCI DSS Requirement(s)</strong></th>
+<th width="60%"><strong>Description and Practical Examples</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Secure Configuration Processes</strong></td>
+<td>2.1.1, 2.2.1</td>
+<td>Documented processes for applying secure configurations to all in-scope system components, aligned with industry-accepted hardening standards (e.g., CIS, NIST). <strong>Example</strong>: An SOP in Word or SharePoint detailing server hardening procedures, referencing CIS Windows Server 2022 benchmarks, with steps for disabling unnecessary services and applying security patches.</td>
+</tr>
+<tr>
+<td><strong>System Configuration Standards</strong></td>
+<td>2.2.2, 2.2.3, 2.2.4</td>
+<td>Documented standards for secure configurations across system types (e.g., servers, databases, applications), addressing known vulnerabilities and removing unnecessary functionality. <strong>Example</strong>: A PDF configuration guide listing required settings for Windows servers (e.g., disabled Telnet, enabled TLS 1.3) and databases (e.g., MySQL with restricted user privileges), aligned with CIS benchmarks.</td>
+</tr>
+<tr>
+<td><strong>System Configuration Evidence</strong></td>
+<td>2.2.2, 2.2.3, 2.2.4</td>
+<td>Screenshots or configuration files showing secure settings applied to in-scope systems, with unnecessary services, protocols, and default accounts disabled or removed. <strong>Example</strong>: Screenshots from a server showing disabled FTP, removed guest accounts, and enabled secure protocols (e.g., SSH with AES-256), plus a configuration file for a database with restricted access.</td>
+</tr>
+<tr>
+<td><strong>Non-Console Access Encryption</strong></td>
+<td>2.2.5</td>
+<td>Configurations demonstrating that all non-console administrative access to CDE systems is encrypted using strong cryptography (e.g., SSH, RDP with TLS). <strong>Example</strong>: SSH configuration file (e.g., sshd_config) showing AES-256 encryption and RDP settings with TLS 1.3 enabled, verified via screenshots from a CDE server.</td>
+</tr>
+<tr>
+<td><strong>Vendor Default Account Management</strong></td>
+<td>2.2.3</td>
+<td>Evidence that vendor-supplied default accounts, passwords, and settings are changed or disabled on in-scope systems. <strong>Example</strong>: A change log or screenshot showing renamed or disabled default accounts (e.g., "admin" changed to a unique ID) on a payment application or router, with updated passwords.</td>
+</tr>
+<tr>
+<td><strong>Technology Review Records (DESV)</strong></td>
+<td>A3.2.4</td>
+<td>For Designated Entities, annual review records confirming that hardware and software technologies in the CDE continue to meet PCI DSS requirements. <strong>Example</strong>: A PDF report summarizing annual reviews of server OS (e.g., Windows Server 2022) and firewall firmware, noting compliance with PCI DSS and any updates applied.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+
+<footer>
+<div class="container">
+<p>PCI DSS 4.0.1 Evidence Requirements Guide</p>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCI DSS 4.0.1 Evidence Requirements - Governance, Risk, and Compliance Domain</title>
+<style>
+:root {
+--primary-color: #2c3e50;
+--secondary-color: #3498db;
+--accent-color: #e74c3c;
+--light-bg: #f5f7fa;
+--text-color: #333;
+--light-text: #666;
+--border-color: #ddd;
+--table-header: #f1f8ff;
+--table-even: #f9f9f9;
+--nav-highlight: #2980b9;
+}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: var(--text-color);
+background-color: var(--light-bg);
+padding: 0;
+margin: 0;
+}
+.container {max-width: 1200px; margin: 0 auto; padding: 0 20px;}
+header {
+background-color: var(--primary-color);
+color: white;
+padding: 2rem 0;
+margin-bottom: 2rem;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header h1 {font-size: 2.5rem; margin-bottom: 0.5rem;}
+header p {font-size: 1.2rem; opacity: 0.8;}
+nav {
+background-color: white;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+margin-bottom: 2rem;
+overflow: hidden;
+}
+nav ul {
+display: flex;
+list-style: none;
+overflow-x: auto;
+padding: 0;
+}
+nav ul li {
+flex-shrink: 0;
+}
+nav ul li a {
+display: block;
+padding: 1rem 1.5rem;
+text-decoration: none;
+color: var(--text-color);
+font-weight: 500;
+transition: background-color 0.3s ease;
+white-space: nowrap;
+}
+nav ul li a:hover {
+background-color: var(--light-bg);
+}
+nav ul li a.active {
+background-color: var(--nav-highlight);
+color: white;
+}
+.back-to-index {
+display: inline-block;
+margin-bottom: 1rem;
+color: var(--secondary-color);
+text-decoration: none;
+font-weight: 500;
+}
+.back-to-index:before {
+content: "← ";
+}
+section {
+background-color: white;
+border-radius: 8px;
+padding: 2rem;
+margin-bottom: 2rem;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+h2 {
+color: var(--primary-color);
+margin-bottom: 1rem;
+padding-bottom: 0.5rem;
+border-bottom: 2px solid var(--secondary-color);
+}
+.domain-intro {
+background-color: var(--light-bg);
+padding: 1.5rem;
+border-left: 4px solid var(--secondary-color);
+margin-bottom: 2rem;
+border-radius: 4px;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 1.5rem 0;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+th, td {
+padding: 1rem;
+text-align: left;
+border: 1px solid var(--border-color);
+vertical-align: top;
+}
+th {
+background-color: var(--table-header);
+font-weight: 600;
+color: var(--primary-color);
+}
+tr:nth-child(even) {background-color: var(--table-even);}
+strong {font-weight: bold;}
+footer {
+background-color: var(--primary-color);
+color: white;
+text-align: center;
+padding: 1.5rem 0;
+margin-top: 2rem;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<h1>Governance, Risk, and Compliance Domain</h1>
+<p>PCI DSS 4.0.1 Evidence Requirements</p>
+</div>
+</header>
+
+<div class="container">
+<a href="index.html" class="back-to-index">Back to Index</a>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="scoping.html">Scoping</a></li>
+<li><a href="governance.html" class="active">Governance</a></li>
+<li><a href="network-security.html">Network Security</a></li>
+<li><a href="system-security.html">System Security</a></li>
+<li><a href="data-security.html">Data Security</a></li>
+<li><a href="access-control.html">Access Control</a></li>
+<li><a href="physical-security.html">Physical Security</a></li>
+<li><a href="vulnerability-management.html">Vulnerability Management</a></li>
+<li><a href="logging-monitoring.html">Logging & Monitoring</a></li>
+<li><a href="security-scanning.html">Security Scanning</a></li>
+<li><a href="incident-response.html">Incident Response</a></li>
+<li><a href="third-party.html">Third-Party Providers</a></li>
+<li><a href="additional-requirements.html">Additional Requirements</a></li>
+</ul>
+</nav>
+
+<section>
+<div class="domain-intro">
+<p>The <strong>Governance, Risk, and Compliance</strong> domain establishes the organizational framework for PCI DSS compliance through policies, risk management, executive oversight, training, and continuous monitoring. The evidence below is consolidated for functional stakeholders (e.g., compliance, security, HR, executive teams), using practical, real-world artifacts aligned with PCI DSS v4.0.1 requirements.</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th width="25%"><strong>Evidence Requirement</strong></th>
+<th width="15%"><strong>PCI DSS Requirement(s)</strong></th>
+<th width="60%"><strong>Description and Practical Examples</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Information Security Policy</strong></td>
+<td>12.1.1, 12.1.2, 12.1.3, 12.1.4</td>
+<td>A documented policy governing cardholder data protection, defining purpose, scope, responsibilities, and security commitment. Reviewed and updated annually, disseminated to personnel, with quarterly procedure reviews. <strong>Example</strong>: A PDF document titled "Information Security Policy" signed by the CISO, outlining CDE protection measures, roles (e.g., security officer), and compliance commitments, with a revision log showing annual updates and quarterly procedure review meeting minutes.</td>
+</tr>
+<tr>
+<td><strong>Executive Responsibility Assignment</strong></td>
+<td>12.4.1, 12.4.2</td>
+<td>Documentation assigning executive responsibility for PCI DSS compliance, including accountability and, for service providers, a defined compliance program charter. <strong>Example</strong>: An organizational chart or memo naming the executive (e.g., CTO) responsible for PCI DSS, plus a service provider's charter document (e.g., in Confluence) detailing compliance program objectives and executive reporting structure.</td>
+</tr>
+<tr>
+<td><strong>Risk Assessment Reports</strong></td>
+<td>12.3.1, 12.3.2</td>
+<td>Annual enterprise-wide risk assessment identifying CDE threats, vulnerabilities, and impacts, plus targeted risk analyses for flexible requirements (e.g., control frequencies) with justifications. <strong>Example</strong>: A risk assessment report in Word or Excel listing CDE assets (e.g., payment servers), threats (e.g., malware), likelihood/impact scores, and mitigation plans, plus a targeted analysis justifying quarterly vulnerability scans based on transaction volume.</td>
+</tr>
+<tr>
+<td><strong>BAU Monitoring Processes</strong></td>
+<td>12.5.1, 12.5.3</td>
+<td>Documented processes embedding PCI DSS controls into daily operations, including anomaly detection, alerting, and quarterly reviews of security policies and scope accuracy. <strong>Example</strong>: An SOP in SharePoint describing daily SIEM monitoring for CDE access anomalies, with sample SIEM alert emails and quarterly review logs showing policy and scope validation.</td>
+</tr>
+<tr>
+<td><strong>Security Awareness Training Records</strong></td>
+<td>12.6.1, 12.6.2</td>
+<td>Records of a security awareness program, including annual training for personnel, acknowledgment of completion, and acceptable use policies. <strong>Example</strong>: A training completion report from a platform (e.g., KnowBe4) listing personnel who completed PCI DSS training, with signed acknowledgments (e.g., PDF forms) and an acceptable use policy document distributed to staff.</td>
+</tr>
+<tr>
+<td><strong>Personnel Screening Procedures</strong></td>
+<td>12.7.1</td>
+<td>Documented processes for screening personnel with CDE access (e.g., background checks) before hiring, compliant with local laws. <strong>Example</strong>: An HR policy document outlining background check procedures (e.g., criminal history, reference checks) for IT staff with CDE access, plus sample screening records (redacted for privacy) for recent hires.</td>
+</tr>
+<tr>
+<td><strong>Formal Compliance Program Documentation (DESV)</strong></td>
+<td>A3.1.1, A3.1.2, A3.1.3</td>
+<td>For Designated Entities, policies and records of a formal PCI DSS compliance program, including evaluation methodologies, strategic decision impacts, and specialized training for compliance personnel. <strong>Example</strong>: A compliance program playbook in PDF detailing quarterly scope reviews, risk assessment methods, and training schedules, plus records of specialized PCI DSS training for the compliance team (e.g., from PCI SSC webinars).</td>
+</tr>
+<tr>
+<td><strong>BAU Activity Review Records (DESV)</strong></td>
+<td>A3.3.1</td>
+<td>For Designated Entities, quarterly review records of BAU activities, including evidence collection, remediation actions, and sign-off, retained for at least 12 months. <strong>Example</strong>: A quarterly review report in Excel summarizing BAU control checks (e.g., log monitoring, access reviews), identified issues, remediation steps, and management sign-off, stored in a compliance repository.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+
+<footer>
+<div class="container">
+<p>PCI DSS 4.0.1 Evidence Requirements Guide</p>
+</div>
+</footer>
+</body>
+</html>

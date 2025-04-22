@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCI DSS 4.0.1 Evidence Requirements - Access Control Domain</title>
+<style>
+:root {
+--primary-color: #2c3e50;
+--secondary-color: #3498db;
+--accent-color: #e74c3c;
+--light-bg: #f5f7fa;
+--text-color: #333;
+--light-text: #666;
+--border-color: #ddd;
+--table-header: #f1f8ff;
+--table-even: #f9f9f9;
+--nav-highlight: #2980b9;
+}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: var(--text-color);
+background-color: var(--light-bg);
+padding: 0;
+margin: 0;
+}
+.container {max-width: 1200px; margin: 0 auto; padding: 0 20px;}
+header {
+background-color: var(--primary-color);
+color: white;
+padding: 2rem 0;
+margin-bottom: 2rem;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header h1 {font-size: 2.5rem; margin-bottom: 0.5rem;}
+header p {font-size: 1.2rem; opacity: 0.8;}
+nav {
+background-color: white;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+margin-bottom: 2rem;
+overflow: hidden;
+}
+nav ul {
+display: flex;
+list-style: none;
+overflow-x: auto;
+padding: 0;
+}
+nav ul li {
+flex-shrink: 0;
+}
+nav ul li a {
+display: block;
+padding: 1rem 1.5rem;
+text-decoration: none;
+color: var(--text-color);
+font-weight: 500;
+transition: background-color 0.3s ease;
+white-space: nowrap;
+}
+nav ul li a:hover {
+background-color: var(--light-bg);
+}
+nav ul li a.active {
+background-color: var(--nav-highlight);
+color: white;
+}
+.back-to-index {
+display: inline-block;
+margin-bottom: 1rem;
+color: var(--secondary-color);
+text-decoration: none;
+font-weight: 500;
+}
+.back-to-index:before {
+content: "← ";
+}
+section {
+background-color: white;
+border-radius: 8px;
+padding: 2rem;
+margin-bottom: 2rem;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+h2 {
+color: var(--primary-color);
+margin-bottom: 1rem;
+padding-bottom: 0.5rem;
+border-bottom: 2px solid var(--secondary-color);
+}
+.domain-intro {
+background-color: var(--light-bg);
+padding: 1.5rem;
+border-left: 4px solid var(--secondary-color);
+margin-bottom: 2rem;
+border-radius: 4px;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 1.5rem 0;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+th, td {
+padding: 1rem;
+text-align: left;
+border: 1px solid var(--border-color);
+vertical-align: top;
+}
+th {
+background-color: var(--table-header);
+font-weight: 600;
+color: var(--primary-color);
+}
+tr:nth-child(even) {background-color: var(--table-even);}
+strong {font-weight: bold;}
+footer {
+background-color: var(--primary-color);
+color: white;
+text-align: center;
+padding: 1.5rem 0;
+margin-top: 2rem;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<h1>Access Control Domain</h1>
+<p>PCI DSS 4.0.1 Evidence Requirements</p>
+</div>
+</header>
+
+<div class="container">
+<a href="index.html" class="back-to-index">Back to Index</a>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="scoping.html">Scoping</a></li>
+<li><a href="governance.html">Governance</a></li>
+<li><a href="network-security.html">Network Security</a></li>
+<li><a href="system-security.html">System Security</a></li>
+<li><a href="data-security.html">Data Security</a></li>
+<li><a href="access-control.html" class="active">Access Control</a></li>
+<li><a href="physical-security.html">Physical Security</a></li>
+<li><a href="vulnerability-management.html">Vulnerability Management</a></li>
+<li><a href="logging-monitoring.html">Logging & Monitoring</a></li>
+<li><a href="security-scanning.html">Security Scanning</a></li>
+<li><a href="incident-response.html">Incident Response</a></li>
+<li><a href="third-party.html">Third-Party Providers</a></li>
+<li><a href="additional-requirements.html">Additional Requirements</a></li>
+</ul>
+</nav>
+
+<section>
+<div class="domain-intro">
+<p>The <strong>Access Control</strong> domain ensures that access to system components and cardholder data in the Cardholder Data Environment (CDE) is restricted based on business need-to-know and authenticated appropriately. The evidence below is consolidated for functional stakeholders (e.g., IT, security, system administration teams), using practical, real-world artifacts aligned with PCI DSS v4.0.1 requirements.</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th width="25%"><strong>Evidence Requirement</strong></th>
+<th width="15%"><strong>PCI DSS Requirement(s)</strong></th>
+<th width="60%"><strong>Description and Practical Examples</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Access Control Policy</strong></td>
+<td>7.1.1, 7.2.1, 7.2.2</td>
+<td>A documented policy defining access control processes for CDE systems and data, based on least privilege and business need-to-know, with role-based access assignments. <strong>Example</strong>: A PDF policy document titled "Access Control Policy" outlining role-based access for CDE systems (e.g., payment admins vs. support staff), with procedures for granting and revoking access.</td>
+</tr>
+<tr>
+<td><strong>User Account Configurations</strong></td>
+<td>8.1.1, 8.2.1, 8.2.2</td>
+<td>Configurations showing unique user IDs for all CDE system accounts, with no shared or generic accounts, and evidence of disabled vendor-supplied default accounts. <strong>Example</strong>: Active Directory (AD) screenshots showing unique user IDs (e.g., jdoe@company.com) for CDE server access, with disabled default accounts (e.g., "Administrator" renamed or disabled).</td>
+</tr>
+<tr>
+<td><strong>Authentication Procedures</strong></td>
+<td>8.1.2, 8.3.1, 8.3.2, 8.4.1, 8.4.2, 8.4.3</td>
+<td>Documented procedures and configurations for secure authentication, including strong password requirements (e.g., minimum length, complexity) and multi-factor authentication (MFA) for remote and non-console CDE access. <strong>Example</strong>: An SOP detailing password policies (e.g., 12 characters, mixed case) and MFA setup, plus Okta or Duo configuration screenshots showing MFA enabled for VPN and CDE server access.</td>
+</tr>
+<tr>
+<td><strong>Access Control Lists</strong></td>
+<td>7.2.3, 7.2.4</td>
+<td>Lists or configurations defining access permissions for CDE systems and data, reflecting least privilege and role-based access. <strong>Example</strong>: An Excel spreadsheet or AD group policy report listing CDE roles (e.g., "Payment DB Admins") and their permissions (e.g., read-only for reporting, full access for admins), verified by system access logs.</td>
+</tr>
+<tr>
+<td><strong>User Access Review Records</strong></td>
+<td>7.2.5, A3.2.5 (DESV)</td>
+<td>Records of quarterly reviews of user access privileges to CDE systems, ensuring alignment with business needs, with remediation actions for unauthorized access. <strong>Example</strong>: A quarterly access review report in PDF summarizing AD account audits, noting removed or adjusted accounts (e.g., ex-employee access revoked), with management sign-off.</td>
+</tr>
+<tr>
+<td><strong>Account Termination Procedures</strong></td>
+<td>8.2.6</td>
+<td>Documented processes and evidence for timely termination of CDE access for terminated personnel or inactive accounts (e.g., within 90 days). <strong>Example</strong>: An HR-IT procedure in Word for disabling accounts upon termination, plus a ServiceNow ticket log showing a terminated employee's CDE access revoked within 24 hours.</td>
+</tr>
+<tr>
+<td><strong>Privileged Account Management</strong></td>
+<td>8.2.3, 8.2.4, 8.2.5</td>
+<td>Evidence of controls for managing privileged accounts (e.g., admin accounts) in the CDE, including restricted access and monitoring. <strong>Example</strong>: A CyberArk or BeyondTrust report showing privileged account usage on CDE servers, with access restricted to specific admins and session monitoring logs.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+
+<footer>
+<div class="container">
+<p>PCI DSS 4.0.1 Evidence Requirements Guide</p>
+</div>
+</footer>
+</body>
+</html>

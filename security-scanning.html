@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCI DSS 4.0.1 Evidence Requirements - Security Scanning Domain</title>
+<style>
+:root {
+--primary-color: #2c3e50;
+--secondary-color: #3498db;
+--accent-color: #e74c3c;
+--light-bg: #f5f7fa;
+--text-color: #333;
+--light-text: #666;
+--border-color: #ddd;
+--table-header: #f1f8ff;
+--table-even: #f9f9f9;
+--nav-highlight: #2980b9;
+}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: var(--text-color);
+background-color: var(--light-bg);
+padding: 0;
+margin: 0;
+}
+.container {max-width: 1200px; margin: 0 auto; padding: 0 20px;}
+header {
+background-color: var(--primary-color);
+color: white;
+padding: 2rem 0;
+margin-bottom: 2rem;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header h1 {font-size: 2.5rem; margin-bottom: 0.5rem;}
+header p {font-size: 1.2rem; opacity: 0.8;}
+nav {
+background-color: white;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+margin-bottom: 2rem;
+overflow: hidden;
+}
+nav ul {
+display: flex;
+list-style: none;
+overflow-x: auto;
+padding: 0;
+}
+nav ul li {
+flex-shrink: 0;
+}
+nav ul li a {
+display: block;
+padding: 1rem 1.5rem;
+text-decoration: none;
+color: var(--text-color);
+font-weight: 500;
+transition: background-color 0.3s ease;
+white-space: nowrap;
+}
+nav ul li a:hover {
+background-color: var(--light-bg);
+}
+nav ul li a.active {
+background-color: var(--nav-highlight);
+color: white;
+}
+.back-to-index {
+display: inline-block;
+margin-bottom: 1rem;
+color: var(--secondary-color);
+text-decoration: none;
+font-weight: 500;
+}
+.back-to-index:before {
+content: "← ";
+}
+section {
+background-color: white;
+border-radius: 8px;
+padding: 2rem;
+margin-bottom: 2rem;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+h2 {
+color: var(--primary-color);
+margin-bottom: 1rem;
+padding-bottom: 0.5rem;
+border-bottom: 2px solid var(--secondary-color);
+}
+.domain-intro {
+background-color: var(--light-bg);
+padding: 1.5rem;
+border-left: 4px solid var(--secondary-color);
+margin-bottom: 2rem;
+border-radius: 4px;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 1.5rem 0;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+th, td {
+padding: 1rem;
+text-align: left;
+border: 1px solid var(--border-color);
+vertical-align: top;
+}
+th {
+background-color: var(--table-header);
+font-weight: 600;
+color: var(--primary-color);
+}
+tr:nth-child(even) {background-color: var(--table-even);}
+strong {font-weight: bold;}
+footer {
+background-color: var(--primary-color);
+color: white;
+text-align: center;
+padding: 1.5rem 0;
+margin-top: 2rem;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<h1>Security Scanning Domain</h1>
+<p>PCI DSS 4.0.1 Evidence Requirements</p>
+</div>
+</header>
+
+<div class="container">
+<a href="index.html" class="back-to-index">Back to Index</a>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="scoping.html">Scoping</a></li>
+<li><a href="governance.html">Governance</a></li>
+<li><a href="network-security.html">Network Security</a></li>
+<li><a href="system-security.html">System Security</a></li>
+<li><a href="data-security.html">Data Security</a></li>
+<li><a href="access-control.html">Access Control</a></li>
+<li><a href="physical-security.html">Physical Security</a></li>
+<li><a href="vulnerability-management.html">Vulnerability Management</a></li>
+<li><a href="logging-monitoring.html">Logging & Monitoring</a></li>
+<li><a href="security-scanning.html" class="active">Security Scanning</a></li>
+<li><a href="incident-response.html">Incident Response</a></li>
+<li><a href="third-party.html">Third-Party Providers</a></li>
+<li><a href="additional-requirements.html">Additional Requirements</a></li>
+</ul>
+</nav>
+
+<section>
+<div class="domain-intro">
+<p>The <strong>Security Scanning</strong> domain ensures that systems and networks in the Cardholder Data Environment (CDE) are regularly tested to identify and remediate security vulnerabilities. The evidence below is consolidated for functional stakeholders (e.g., IT, security, network teams), using practical, real-world artifacts aligned with PCI DSS v4.0.1 requirements.</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th width="25%"><strong>Evidence Requirement</strong></th>
+<th width="15%"><strong>PCI DSS Requirement(s)</strong></th>
+<th width="60%"><strong>Description and Practical Examples</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Security Testing Policy</strong></td>
+<td>11.1.1</td>
+<td>A documented policy defining processes for regular security testing of CDE systems and networks, including vulnerability scanning and penetration testing. <strong>Example</strong>: A PDF policy document titled "Security Testing Policy" outlining quarterly vulnerability scanning and annual penetration testing procedures for CDE systems, with defined roles for IT and security teams.</td>
+</tr>
+<tr>
+<td><strong>Internal Vulnerability Scan Reports</strong></td>
+<td>11.3.1, 11.3.2</td>
+<td>Quarterly internal vulnerability scan reports for CDE systems, conducted using authenticated scans, with identified vulnerabilities risk-ranked and remediated. <strong>Example</strong>: A Tenable Nessus scan report in PDF listing CDE server vulnerabilities (e.g., outdated software), with CVSS scores and a follow-up report showing remediation (e.g., patched software versions).</td>
+</tr>
+<tr>
+<td><strong>External Vulnerability Scan Reports</strong></td>
+<td>11.3.3, 11.3.4</td>
+<td>Quarterly external vulnerability scan reports conducted by an Approved Scanning Vendor (ASV), with passing results for the last 12 months and evidence of resolved vulnerabilities. <strong>Example</strong>: An ASV scan report from Qualys in PDF showing a passing result for CDE external IPs, plus rescan reports confirming remediation of initially identified vulnerabilities (e.g., weak TLS versions).</td>
+</tr>
+<tr>
+<td><strong>Penetration Testing Reports</strong></td>
+<td>11.4.1, 11.4.2, 11.4.3, 11.4.4</td>
+<td>Annual internal and external penetration test reports for CDE systems and networks, conducted by qualified personnel, with defined scope, real-world attack simulations, and remediated vulnerabilities. <strong>Example</strong>: A penetration test report in PDF from a QSA or third-party (e.g., Rapid7) detailing tested CDE systems, exploited vulnerabilities (e.g., SQL injection), and evidence of fixes (e.g., updated application code).</td>
+</tr>
+<tr>
+<td><strong>Segmentation Penetration Testing Records (DESV)</strong></td>
+<td>A3.2.3, 11.4.5</td>
+<td>For Designated Entities using segmentation, penetration test results conducted every 6 months (and after segmentation changes) to validate segmentation controls isolating the CDE. <strong>Example</strong>: A semi-annual penetration test report in PDF confirming no access from non-CDE to CDE systems, with firewall ACLs and test results verifying segmentation effectiveness.</td>
+</tr>
+<tr>
+<td><strong>Intrusion Detection/Prevention Configurations</strong></td>
+<td>11.5.1, 11.5.2</td>
+<td>Configurations of intrusion-detection or prevention systems (IDS/IPS) monitoring CDE network traffic, with evidence of alert generation and response to suspicious activities. <strong>Example</strong>: Screenshots from an IDS/IPS console (e.g., Cisco Secure IPS) showing active monitoring of CDE traffic, plus a log of alerts (e.g., detected port scans) with response actions documented in a ServiceNow ticket.</td>
+</tr>
+<tr>
+<td><strong>File Integrity Monitoring Configurations</strong></td>
+<td>11.6.1</td>
+<td>Configurations of file integrity monitoring (FIM) tools on CDE systems to detect changes to critical files, with evidence of alerts for unauthorized changes. <strong>Example</strong>: A Tripwire or OSSEC configuration screenshot showing FIM enabled on CDE server files (e.g., payment application configs), plus an alert log documenting detected file changes and investigations.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+
+<footer>
+<div class="container">
+<p>PCI DSS 4.0.1 Evidence Requirements Guide</p>
+</div>
+</footer>
+</body>
+</html>

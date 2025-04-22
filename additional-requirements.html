@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCI DSS 4.0.1 Evidence Requirements - Additional Requirements Domain</title>
+<style>
+:root {
+--primary-color: #2c3e50;
+--secondary-color: #3498db;
+--accent-color: #e74c3c;
+--light-bg: #f5f7fa;
+--text-color: #333;
+--light-text: #666;
+--border-color: #ddd;
+--table-header: #f1f8ff;
+--table-even: #f9f9f9;
+--nav-highlight: #2980b9;
+}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: var(--text-color);
+background-color: var(--light-bg);
+padding: 0;
+margin: 0;
+}
+.container {max-width: 1200px; margin: 0 auto; padding: 0 20px;}
+header {
+background-color: var(--primary-color);
+color: white;
+padding: 2rem 0;
+margin-bottom: 2rem;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header h1 {font-size: 2.5rem; margin-bottom: 0.5rem;}
+header p {font-size: 1.2rem; opacity: 0.8;}
+nav {
+background-color: white;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+margin-bottom: 2rem;
+overflow: hidden;
+}
+nav ul {
+display: flex;
+list-style: none;
+overflow-x: auto;
+padding: 0;
+}
+nav ul li {
+flex-shrink: 0;
+}
+nav ul li a {
+display: block;
+padding: 1rem 1.5rem;
+text-decoration: none;
+color: var(--text-color);
+font-weight: 500;
+transition: background-color 0.3s ease;
+white-space: nowrap;
+}
+nav ul li a:hover {
+background-color: var(--light-bg);
+}
+nav ul li a.active {
+background-color: var(--nav-highlight);
+color: white;
+}
+.back-to-index {
+display: inline-block;
+margin-bottom: 1rem;
+color: var(--secondary-color);
+text-decoration: none;
+font-weight: 500;
+}
+.back-to-index:before {
+content: "← ";
+}
+section {
+background-color: white;
+border-radius: 8px;
+padding: 2rem;
+margin-bottom: 2rem;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+h2 {
+color: var(--primary-color);
+margin-bottom: 1rem;
+padding-bottom: 0.5rem;
+border-bottom: 2px solid var(--secondary-color);
+}
+.domain-intro {
+background-color: var(--light-bg);
+padding: 1.5rem;
+border-left: 4px solid var(--secondary-color);
+margin-bottom: 2rem;
+border-radius: 4px;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 1.5rem 0;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+th, td {
+padding: 1rem;
+text-align: left;
+border: 1px solid var(--border-color);
+vertical-align: top;
+}
+th {
+background-color: var(--table-header);
+font-weight: 600;
+color: var(--primary-color);
+}
+tr:nth-child(even) {background-color: var(--table-even);}
+strong {font-weight: bold;}
+footer {
+background-color: var(--primary-color);
+color: white;
+text-align: center;
+padding: 1.5rem 0;
+margin-top: 2rem;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<h1>Additional Requirements Domain</h1>
+<p>PCI DSS 4.0.1 Evidence Requirements</p>
+</div>
+</header>
+
+<div class="container">
+<a href="index.html" class="back-to-index">Back to Index</a>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="scoping.html">Scoping</a></li>
+<li><a href="governance.html">Governance</a></li>
+<li><a href="network-security.html">Network Security</a></li>
+<li><a href="system-security.html">System Security</a></li>
+<li><a href="data-security.html">Data Security</a></li>
+<li><a href="access-control.html">Access Control</a></li>
+<li><a href="physical-security.html">Physical Security</a></li>
+<li><a href="vulnerability-management.html">Vulnerability Management</a></li>
+<li><a href="logging-monitoring.html">Logging & Monitoring</a></li>
+<li><a href="security-scanning.html">Security Scanning</a></li>
+<li><a href="incident-response.html">Incident Response</a></li>
+<li><a href="third-party.html">Third-Party Providers</a></li>
+<li><a href="additional-requirements.html" class="active">Additional Requirements</a></li>
+</ul>
+</nav>
+
+<section>
+<div class="domain-intro">
+<p>The <strong>Additional Requirements</strong> domain covers specific PCI DSS requirements for multi-tenant service providers, entities using SSL/early TLS for card-present POS POI terminal connections, and other specialized scenarios as outlined in Appendices A1 and A2. These requirements are applicable only to certain entities based on their operational context. The evidence below is consolidated for functional stakeholders (e.g., IT, security, compliance teams), using practical, real-world artifacts aligned with PCI DSS v4.0.1 requirements.</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th width="25%"><strong>Evidence Requirement</strong></th>
+<th width="15%"><strong>PCI DSS Requirement(s)</strong></th>
+<th width="60%"><strong>Description and Practical Examples</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Multi-Tenant Service Provider Isolation Controls</strong></td>
+<td>A1.1.1, A1.1.2, A1.1.3, A1.1.4</td>
+<td>For multi-tenant service providers, documentation and configurations demonstrating logical and physical isolation of each customer's environment, including CHD storage and processing. <strong>Example</strong>: A PDF report detailing virtual private cloud (VPC) configurations (e.g., AWS VPC with dedicated subnets) for customer environments, plus access control lists (ACLs) ensuring no cross-tenant access to CHD.</td>
+</tr>
+<tr>
+<td><strong>Multi-Tenant Service Provider Access Controls</strong></td>
+<td>A1.2.1, A1.2.2</td>
+<td>Evidence of role-based access controls restricting customer access to their own environments and preventing unauthorized access to other tenants' data. <strong>Example</strong>: Screenshots from an identity management system (e.g., Okta) showing role-based access for tenant admins, with logs confirming no unauthorized access attempts across tenant boundaries.</td>
+</tr>
+<tr>
+<td><strong>Multi-Tenant Penetration Testing Records</strong></td>
+<td>A1.1.4</td>
+<td>Penetration test reports for multi-tenant service providers, conducted annually on customer-subscribed infrastructure, verifying isolation controls and remediating vulnerabilities. <strong>Example</strong>: A PDF penetration test report from a QSA (e.g., Trustwave) testing tenant isolation in a multi-tenant environment, with findings (e.g., weak API authentication) and evidence of remediation (e.g., updated API security).</td>
+</tr>
+<tr>
+<td><strong>SSL/Early TLS Transition Plan</strong></td>
+<td>A2.1.1</td>
+<td>For entities using SSL/early TLS for card-present POS POI terminal connections, a documented plan to transition to secure protocols (e.g., TLS 1.2 or higher), including timelines and risk mitigations. <strong>Example</strong>: A Word document titled "TLS Transition Plan" outlining a 6-month migration from TLS 1.0 to TLS 1.3 for POS terminals, with interim mitigations (e.g., network segmentation) and a project timeline.</td>
+</tr>
+<tr>
+<td><strong>SSL/Early TLS Secure Configurations</strong></td>
+<td>A2.1.2</td>
+<td>Configurations showing secure protocol usage (e.g., TLS 1.2 or higher) or compensating controls for SSL/early TLS in POS POI environments, with evidence of vulnerability remediation. <strong>Example</strong>: Screenshots of POS terminal configurations (e.g., Verifone terminal settings) showing TLS 1.2 enabled, plus a vulnerability scan report confirming no exploitable SSL/early TLS weaknesses.</td>
+</tr>
+<tr>
+<td><strong>SSL/Early TLS Risk Assessment</strong></td>
+<td>A2.1.1</td>
+<td>A risk assessment for entities using SSL/early TLS, identifying risks, justifying continued use (if applicable), and detailing compensating controls. <strong>Example</strong>: A PDF risk assessment report listing risks of SSL in POS terminals (e.g., man-in-the-middle attacks), justifying temporary use due to legacy systems, and detailing compensating controls (e.g., IPS monitoring, encrypted VPN).</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+
+<footer>
+<div class="container">
+<p>PCI DSS 4.0.1 Evidence Requirements Guide</p>
+</div>
+</footer>
+</body>
+</html>

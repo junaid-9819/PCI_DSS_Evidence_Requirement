@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCI DSS 4.0.1 Evidence Requirements</title>
+<style>
+:root {
+--primary-color: #2c3e50;
+--secondary-color: #3498db;
+--accent-color: #e74c3c;
+--light-bg: #f5f7fa;
+--text-color: #333;
+--light-text: #666;
+--border-color: #ddd;
+--card-bg: white;
+}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: var(--text-color);
+background-color: var(--light-bg);
+padding: 0;
+margin: 0;
+}
+.container {max-width: 1200px; margin: 0 auto; padding: 0 20px;}
+header {
+background-color: var(--primary-color);
+color: white;
+padding: 2rem 0;
+margin-bottom: 2rem;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header h1 {font-size: 2.5rem; margin-bottom: 0.5rem; text-align: center;}
+header p {font-size: 1.2rem; opacity: 0.8; text-align: center;}
+
+.intro {
+background-color: white;
+padding: 2rem;
+margin-bottom: 2rem;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.domain-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 1.5rem;
+margin-bottom: 2rem;
+}
+
+.domain-card {
+background-color: var(--card-bg);
+border-radius: 8px;
+overflow: hidden;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.domain-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+background-color: var(--primary-color);
+color: white;
+padding: 1rem;
+font-weight: bold;
+font-size: 1.2rem;
+}
+
+.card-body {
+padding: 1.5rem;
+}
+
+.card-body p {
+margin-bottom: 1.5rem;
+color: var(--light-text);
+}
+
+.view-btn {
+display: inline-block;
+background-color: var(--secondary-color);
+color: white;
+text-decoration: none;
+padding: 0.5rem 1rem;
+border-radius: 4px;
+font-weight: bold;
+transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+background-color: #2980b9;
+}
+
+footer {
+background-color: var(--primary-color);
+color: white;
+text-align: center;
+padding: 1.5rem 0;
+margin-top: 2rem;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<h1>PCI DSS 4.0.1 Evidence Requirements</h1>
+<p>A comprehensive guide to evidence collection across all domains</p>
+</div>
+</header>
+
+<div class="container">
+<section class="intro">
+<h2>Overview</h2>
+<p>This guide provides detailed requirements for evidence collection to demonstrate compliance with PCI DSS v4.0.1. The requirements are organized by functional domains, aligning with the structure of PCI DSS controls. Each domain includes specific evidence requirements, applicable PCI DSS requirement references, and practical examples of evidence artifacts.</p>
+<p>Select a domain below to view detailed evidence requirements:</p>
+</section>
+
+<div class="domain-grid">
+    <div class="domain-card">
+        <div class="card-header">Scoping Domain</div>
+        <div class="card-body">
+            <p>Defines the Cardholder Data Environment (CDE) and in-scope system components, people, and processes. First step in a PCI DSS assessment.</p>
+            <a href="scoping.html" class="view-btn">View Requirements</a>
+        </div>
+    </div>
+    
+    <div class="domain-card">
+        <div class="card-header">Governance, Risk, and Compliance</div>
+        <div class="card-body">
+            <p>Establishes the organizational framework for PCI DSS compliance through policies, risk management, executive oversight, training, and monitoring.</p>
+            <a href="governance.html" class="view-btn">View Requirements</a>
+        </div>
+    </div>
+    
+    <div class="domain-card">
+        <div class="card-header">Network Security</div>
+        <div class="card-body">
+            <p>Ensures the CDE is protected by robust network security controls, including firewalls, routers, and wireless configurations.</p>
+            <a href="network-security.html" class="view-btn">View Requirements</a>
+        </div>
+    </div>
+    
+    <div class="domain-card">
+        <div class="card-header">System Security</div>
+        <div class="card-body">
+            <p>Ensures that in-scope system components are securely configured and maintained to protect the CDE.</p>
+            <a href="system-security.html" class="view-btn">View Requirements</a>
+        </div>
+    </div>
+    
+    <div class="domain-card">
+        <div class="card-header">Data Security</div>
+        <div class="card-body">
+            <p>Ensures that cardholder data (CHD) and sensitive authentication data (SAD) are protected during storage and transmission.</p>
+            <a href="data-security.html" class="view-btn">View Requirements</a>
+        </div>
+    </div>
+    
+    <div class="domain-card">
+        <div class="card-header">Access Control</div>
+        <div class="card-body">
+            <p>Ensures that access to system components and cardholder data is restricted based on business need-to-know and authenticated appropriately.</p>
+            <a href="access-control.html" class="view-btn">View Requirements</a>
+        </div>
+    </div>
+    
+    <div class="domain-card">
+        <div class="card-header">Physical Security</div>
+        <div class="card-body">
+            <p>Ensures that physical access to cardholder data and the CDE is restricted and monitored to prevent unauthorized access.</p>
+            <a href="physical-security.html" class="view-btn">View Requirements</a>
+        </div>
+    </div>
+    
+    <div class="domain-card">
+        <div class="card-header">Vulnerability Management</div>
+        <div class="card-body">
+            <p>Ensures that systems and networks in the CDE are protected against malicious software and vulnerabilities.</p>
+            <a href="vulnerability-management.html" class="view-btn">View Requirements</a>
+        </div>
+    </div>
+    
+    <div class="domain-card">
+        <div class="card-header">Logging and Monitoring</div>
+        <div class="card-body">
+            <p>Ensures that all access to system components and cardholder data is logged and monitored to detect and respond to security events.</p>
+            <a href="logging-monitoring.html" class="view-btn">View Requirements</a>
+        </div>
+    </div>
+    
+    <div class="domain-card">
+        <div class="card-header">Security Scanning</div>
+        <div class="card-body">
+            <p>Ensures that systems and networks in the CDE are regularly tested to identify and remediate security vulnerabilities.</p>
+            <a href="security-scanning.html" class="view-btn">View Requirements</a>
+        </div>
+    </div>
+    
+    <div class="domain-card">
+        <div class="card-header">Incident Response</div>
+        <div class="card-body">
+            <p>Ensures the organization is prepared to detect, respond to, and recover from security incidents impacting the CDE.</p>
+            <a href="incident-response.html" class="view-btn">View Requirements</a>
+        </div>
+    </div>
+    
+    <div class="domain-card">
+        <div class="card-header">Third-Party Service Provider Management</div>
+        <div class="card-body">
+            <p>Ensures that third-party service providers (TPSPs) handling cardholder data or impacting the security of the CDE are managed appropriately.</p>
+            <a href="third-party.html" class="view-btn">View Requirements</a>
+        </div>
+    </div>
+    
+    <div class="domain-card">
+        <div class="card-header">Additional Requirements</div>
+        <div class="card-body">
+            <p>Covers specific PCI DSS requirements for multi-tenant service providers, entities using SSL/early TLS, and other specialized scenarios.</p>
+            <a href="additional-requirements.html" class="view-btn">View Requirements</a>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer>
+<div class="container">
+<p>PCI DSS 4.0.1 Evidence Requirements Guide</p>
+</div>
+</footer>
+</body>
+</html>

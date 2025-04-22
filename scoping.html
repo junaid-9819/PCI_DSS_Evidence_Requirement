@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCI DSS 4.0.1 Evidence Requirements - Scoping Domain</title>
+<style>
+:root {
+--primary-color: #2c3e50;
+--secondary-color: #3498db;
+--accent-color: #e74c3c;
+--light-bg: #f5f7fa;
+--text-color: #333;
+--light-text: #666;
+--border-color: #ddd;
+--table-header: #f1f8ff;
+--table-even: #f9f9f9;
+--nav-highlight: #2980b9;
+}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: var(--text-color);
+background-color: var(--light-bg);
+padding: 0;
+margin: 0;
+}
+.container {max-width: 1200px; margin: 0 auto; padding: 0 20px;}
+header {
+background-color: var(--primary-color);
+color: white;
+padding: 2rem 0;
+margin-bottom: 2rem;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header h1 {font-size: 2.5rem; margin-bottom: 0.5rem;}
+header p {font-size: 1.2rem; opacity: 0.8;}
+nav {
+background-color: white;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+margin-bottom: 2rem;
+overflow: hidden;
+}
+nav ul {
+display: flex;
+list-style: none;
+overflow-x: auto;
+padding: 0;
+}
+nav ul li {
+flex-shrink: 0;
+}
+nav ul li a {
+display: block;
+padding: 1rem 1.5rem;
+text-decoration: none;
+color: var(--text-color);
+font-weight: 500;
+transition: background-color 0.3s ease;
+white-space: nowrap;
+}
+nav ul li a:hover {
+background-color: var(--light-bg);
+}
+nav ul li a.active {
+background-color: var(--nav-highlight);
+color: white;
+}
+.back-to-index {
+display: inline-block;
+margin-bottom: 1rem;
+color: var(--secondary-color);
+text-decoration: none;
+font-weight: 500;
+}
+.back-to-index:before {
+content: "← ";
+}
+section {
+background-color: white;
+border-radius: 8px;
+padding: 2rem;
+margin-bottom: 2rem;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+h2 {
+color: var(--primary-color);
+margin-bottom: 1rem;
+padding-bottom: 0.5rem;
+border-bottom: 2px solid var(--secondary-color);
+}
+.domain-intro {
+background-color: var(--light-bg);
+padding: 1.5rem;
+border-left: 4px solid var(--secondary-color);
+margin-bottom: 2rem;
+border-radius: 4px;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 1.5rem 0;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+th, td {
+padding: 1rem;
+text-align: left;
+border: 1px solid var(--border-color);
+vertical-align: top;
+}
+th {
+background-color: var(--table-header);
+font-weight: 600;
+color: var(--primary-color);
+}
+tr:nth-child(even) {background-color: var(--table-even);}
+strong {font-weight: bold;}
+footer {
+background-color: var(--primary-color);
+color: white;
+text-align: center;
+padding: 1.5rem 0;
+margin-top: 2rem;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<h1>Scoping Domain</h1>
+<p>PCI DSS 4.0.1 Evidence Requirements</p>
+</div>
+</header>
+
+<div class="container">
+<a href="index.html" class="back-to-index">Back to Index</a>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="scoping.html" class="active">Scoping</a></li>
+<li><a href="governance.html">Governance</a></li>
+<li><a href="network-security.html">Network Security</a></li>
+<li><a href="system-security.html">System Security</a></li>
+<li><a href="data-security.html">Data Security</a></li>
+<li><a href="access-control.html">Access Control</a></li>
+<li><a href="physical-security.html">Physical Security</a></li>
+<li><a href="vulnerability-management.html">Vulnerability Management</a></li>
+<li><a href="logging-monitoring.html">Logging & Monitoring</a></li>
+<li><a href="security-scanning.html">Security Scanning</a></li>
+<li><a href="incident-response.html">Incident Response</a></li>
+<li><a href="third-party.html">Third-Party Providers</a></li>
+<li><a href="additional-requirements.html">Additional Requirements</a></li>
+</ul>
+</nav>
+
+<section>
+<div class="domain-intro">
+<p>The <strong>Scoping</strong> domain is the first step in a PCI DSS assessment, as it defines the Cardholder Data Environment (CDE) and in-scope system components, people, and processes. Accurate scoping ensures all subsequent evidence collection aligns with the environment that stores, processes, or transmits cardholder data (CHD) and/or sensitive authentication data (SAD), or could impact its security. The evidence below is consolidated to engage functional stakeholders (e.g., IT, network, compliance teams) efficiently, using practical, real-world artifacts that assessors can validate.</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th width="25%"><strong>Evidence Requirement</strong></th>
+<th width="15%"><strong>PCI DSS Requirement(s)</strong></th>
+<th width="60%"><strong>Description and Practical Examples</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scope Confirmation Documentation</strong></td>
+<td>12.5.2</td>
+<td>A comprehensive document confirming the PCI DSS scope, updated annually (every 6 months for service providers), identifying all locations, flows, and storage of account data (CHD and SAD), and all systems connected to or impacting the CDE (e.g., authentication servers, SIEM). The document details the scoping process.<br><br><strong>Example</strong>: A Word or PDF document titled "PCI DSS Scope Report" listing payment processing systems (e.g., POS terminals, payment gateways), data storage locations (e.g., databases, backups), and connected systems (e.g., logging servers), with a narrative explaining the scoping methodology (e.g., data discovery scans, IT interviews).</td>
+</tr>
+<tr>
+<td><strong>Data-Flow Diagrams</strong></td>
+<td>12.5.2</td>
+<td>Up-to-date diagrams illustrating CHD and SAD flows, including entry points (e.g., POS, e-commerce), processing systems, storage locations, and transmission to external parties (e.g., acquirers). Diagrams show segmentation boundaries if used.<br><br><strong>Example</strong>: A Visio or Lucidchart diagram showing data flow from POS terminals to a payment processor via a firewall, with arrows indicating CHD transmission and storage in a database, and segmented non-CDE networks labelled.</td>
+</tr>
+<tr>
+<td><strong>System Component Inventory</strong></td>
+<td>12.5.2</td>
+<td>A current inventory of in-scope system components (e.g., servers, network devices, applications, virtual machines, cloud components) with function, location, and CDE role.<br><br><strong>Example</strong>: An Excel spreadsheet listing each component (e.g., "Payment Server 01, IP 192.168.1.10, hosts payment application"), including OS, location (e.g., on-premises data center, AWS), and CDE connectivity (e.g., direct, segmented).</td>
+</tr>
+<tr>
+<td><strong>Segmentation Validation Records</strong></td>
+<td>12.5.2</td>
+<td>If segmentation is used, documentation validating its effectiveness, showing out-of-scope systems cannot impact the CDE. Includes network configurations and test results (e.g., penetration testing for DESV).<br><br><strong>Example</strong>: A report summarizing firewall rules isolating the CDE (e.g., ACLs restricting traffic to specific ports), plus a penetration test report confirming no access from non-CDE systems to the CDE.</td>
+</tr>
+<tr>
+<td><strong>Data-Discovery Scan Results</strong></td>
+<td>12.5.2, A3.2.1 (DESV)</td>
+<td>Records of quarterly data-discovery scans to locate all CHD/SAD storage, including unintended locations (e.g., cleartext PAN outside the CDE).<br><br><strong>Example</strong>: A report from a data-discovery tool (e.g., Spirion, Varonis) listing scanned systems, identified PAN locations (e.g., database tables, log files), and remediation actions for unauthorized storage (e.g., deletion, encryption).</td>
+</tr>
+<tr>
+<td><strong>Change Impact Assessments</strong></td>
+<td>12.5.2, A3.2.2 (DESV)</td>
+<td>Documentation of scope impact assessments for significant system/network changes (e.g., new servers), confirming scope accuracy post-change.<br><br><strong>Example</strong>: A change management ticket (e.g., from ServiceNow) for a new payment application, including a checklist confirming scope review, updated data-flow diagrams, and PCI DSS control verification.</td>
+</tr>
+<tr>
+<td><strong>Wireless Environment Assessment</strong></td>
+<td>11.2.1</td>
+<td>Evidence of rogue wireless detection scans (even if wireless is not used) and, if wireless is used in the CDE, configurations showing secure settings (e.g., WPA3, changed default keys).<br><strong>Example</strong>: A quarterly wireless scan report from a tool (e.g., AirMagnet) showing no unauthorized access points, plus AP configuration screenshots for CDE wireless networks showing secure encryption.</td>
+</tr>
+<tr>
+<td><strong>Unintended Data Receipt Handling</strong></td>
+<td>12.5.2</td>
+<td>Procedures and records for handling CHD/SAD received via unintended channels (e.g., email), showing inclusion in the CDE or secure deletion with preventive measures. <strong>Example</strong>: A procedure document outlining steps to delete CHD from email servers and block future receipt (e.g., DLP rules), plus an incident log showing deletion of unsolicited PAN with email filter updates.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+
+<footer>
+<div class="container">
+<p>PCI DSS 4.0.1 Evidence Requirements Guide</p>
+</div>
+</footer>
+</body>
+</html>

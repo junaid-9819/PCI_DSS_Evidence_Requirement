@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCI DSS 4.0.1 Evidence Requirements - Data Security Domain</title>
+<style>
+:root {
+--primary-color: #2c3e50;
+--secondary-color: #3498db;
+--accent-color: #e74c3c;
+--light-bg: #f5f7fa;
+--text-color: #333;
+--light-text: #666;
+--border-color: #ddd;
+--table-header: #f1f8ff;
+--table-even: #f9f9f9;
+--nav-highlight: #2980b9;
+}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: var(--text-color);
+background-color: var(--light-bg);
+padding: 0;
+margin: 0;
+}
+.container {max-width: 1200px; margin: 0 auto; padding: 0 20px;}
+header {
+background-color: var(--primary-color);
+color: white;
+padding: 2rem 0;
+margin-bottom: 2rem;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header h1 {font-size: 2.5rem; margin-bottom: 0.5rem;}
+header p {font-size: 1.2rem; opacity: 0.8;}
+nav {
+background-color: white;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+margin-bottom: 2rem;
+overflow: hidden;
+}
+nav ul {
+display: flex;
+list-style: none;
+overflow-x: auto;
+padding: 0;
+}
+nav ul li {
+flex-shrink: 0;
+}
+nav ul li a {
+display: block;
+padding: 1rem 1.5rem;
+text-decoration: none;
+color: var(--text-color);
+font-weight: 500;
+transition: background-color 0.3s ease;
+white-space: nowrap;
+}
+nav ul li a:hover {
+background-color: var(--light-bg);
+}
+nav ul li a.active {
+background-color: var(--nav-highlight);
+color: white;
+}
+.back-to-index {
+display: inline-block;
+margin-bottom: 1rem;
+color: var(--secondary-color);
+text-decoration: none;
+font-weight: 500;
+}
+.back-to-index:before {
+content: "← ";
+}
+section {
+background-color: white;
+border-radius: 8px;
+padding: 2rem;
+margin-bottom: 2rem;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+h2 {
+color: var(--primary-color);
+margin-bottom: 1rem;
+padding-bottom: 0.5rem;
+border-bottom: 2px solid var(--secondary-color);
+}
+.domain-intro {
+background-color: var(--light-bg);
+padding: 1.5rem;
+border-left: 4px solid var(--secondary-color);
+margin-bottom: 2rem;
+border-radius: 4px;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 1.5rem 0;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+th, td {
+padding: 1rem;
+text-align: left;
+border: 1px solid var(--border-color);
+vertical-align: top;
+}
+th {
+background-color: var(--table-header);
+font-weight: 600;
+color: var(--primary-color);
+}
+tr:nth-child(even) {background-color: var(--table-even);}
+strong {font-weight: bold;}
+footer {
+background-color: var(--primary-color);
+color: white;
+text-align: center;
+padding: 1.5rem 0;
+margin-top: 2rem;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<h1>Data Security Domain</h1>
+<p>PCI DSS 4.0.1 Evidence Requirements</p>
+</div>
+</header>
+
+<div class="container">
+<a href="index.html" class="back-to-index">Back to Index</a>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="scoping.html">Scoping</a></li>
+<li><a href="governance.html">Governance</a></li>
+<li><a href="network-security.html">Network Security</a></li>
+<li><a href="system-security.html">System Security</a></li>
+<li><a href="data-security.html" class="active">Data Security</a></li>
+<li><a href="access-control.html">Access Control</a></li>
+<li><a href="physical-security.html">Physical Security</a></li>
+<li><a href="vulnerability-management.html">Vulnerability Management</a></li>
+<li><a href="logging-monitoring.html">Logging & Monitoring</a></li>
+<li><a href="security-scanning.html">Security Scanning</a></li>
+<li><a href="incident-response.html">Incident Response</a></li>
+<li><a href="third-party.html">Third-Party Providers</a></li>
+<li><a href="additional-requirements.html">Additional Requirements</a></li>
+</ul>
+</nav>
+
+<section>
+<div class="domain-intro">
+<p>The <strong>Data Security</strong> domain ensures that cardholder data (CHD) and sensitive authentication data (SAD) are protected during storage and transmission within the Cardholder Data Environment (CDE). The evidence below is consolidated for functional stakeholders (e.g., IT, security, database administration teams), using practical, real-world artifacts aligned with PCI DSS v4.0.1 requirements.</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th width="25%"><strong>Evidence Requirement</strong></th>
+<th width="15%"><strong>PCI DSS Requirement(s)</strong></th>
+<th width="60%"><strong>Description and Practical Examples</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data Retention and Disposal Policy</strong></td>
+<td>3.1.1, 3.2.1, 3.2.2</td>
+<td>A documented policy specifying which CHD is retained, retention periods, storage locations, and secure disposal methods when no longer needed. <strong>Example</strong>: A PDF policy document stating PAN retention for 6 months in a payment database, with procedures for secure deletion (e.g., overwriting) and shredding of hard-copy records.</td>
+</tr>
+<tr>
+<td><strong>Stored Data Protection Evidence</strong></td>
+<td>3.3.1, 3.3.2, 3.5.1, 3.5.2</td>
+<td>Evidence that stored PAN is rendered unreadable (e.g., via encryption, truncation, masking, or tokenization) and SAD is not stored post-authorization. <strong>Example</strong>: Database query results showing masked PAN (e.g., xxxx-xxxx-xxxx-1234), a tokenization system report (e.g., from Voltage), and a log confirming no SAD storage after transaction authorization.</td>
+</tr>
+<tr>
+<td><strong>Cryptographic Key Management Procedures</strong></td>
+<td>3.6.1, 3.7.1, 3.7.2, 3.7.3, 3.7.4, 3.7.5, 3.7.6, 3.7.7, 3.7.8</td>
+<td>Documented procedures for managing cryptographic keys used to protect stored CHD, including generation, distribution, storage, and replacement, with limited access to key custodians. <strong>Example</strong>: A key management SOP in Word detailing key generation (e.g., using HSM), secure storage in a hardware security module, and custodian roles, plus a key inventory listing algorithms (e.g., AES-256) and expiry dates.</td>
+</tr>
+<tr>
+<td><strong>Key Custodian Acknowledgments</strong></td>
+<td>3.7.7</td>
+<td>Signed acknowledgments from key custodians confirming their responsibilities for cryptographic key management. <strong>Example</strong>: Signed PDF forms from IT staff designated as key custodians, acknowledging their duties to securely manage encryption keys for the CDE database.</td>
+</tr>
+<tr>
+<td><strong>Transmission Protection Configurations</strong></td>
+<td>4.1.1, 4.2.1, 4.2.2</td>
+<td>Configurations showing strong cryptography (e.g., TLS 1.3) for CHD transmission over open, public networks, with an inventory of trusted keys/certificates. <strong>Example</strong>: Web server configuration screenshots (e.g., Apache with TLS 1.3 enabled) for payment pages, plus a certificate inventory in Excel listing valid SSL/TLS certificates for CDE systems.</td>
+</tr>
+<tr>
+<td><strong>Data Storage Inventory</strong></td>
+<td>3.1.1, 3.2.3</td>
+<td>An inventory of all locations where CHD is stored, including databases, files, and backups, ensuring storage is minimized. <strong>Example</strong>: An Excel spreadsheet listing CHD storage locations (e.g., "Payment DB, Table: Transactions, Column: PAN"), with details on encryption methods and retention periods.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+
+<footer>
+<div class="container">
+<p>PCI DSS 4.0.1 Evidence Requirements Guide</p>
+</div>
+</footer>
+</body>
+</html>
